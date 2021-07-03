@@ -49,7 +49,7 @@ export const Filters = ({ products }) => {
           <label key={idx}>
             <input
               type="checkbox"
-              checked={filter.brand.some((value) => value === item)}
+              checked={filter.brand.includes(item)}
               onChange={() => dispatch({ type: "TOGGLE_BRAND", payload: item })}
             />
             {item}
@@ -62,7 +62,7 @@ export const Filters = ({ products }) => {
           <label key={idx}>
             <input
               type="checkbox"
-              checked={filter.size.some((value) => value === item)}
+              checked={filter.size.includes(item)}
               onChange={() => dispatch({ type: "TOGGLE_SIZE", payload: item })}
             />
             {item}
@@ -73,18 +73,18 @@ export const Filters = ({ products }) => {
         <p className="filter-desc">Ideal for</p>
         <label>
           <input
-            type="radio"
+            type="checkbox"
             name="ideal"
-            checked={filter.ideal === "men"}
+            checked={filter.ideal.includes("men")}
             onChange={() => dispatch({ type: "IDEAL_FOR", payload: "men" })}
           />
           Men
         </label>
         <label>
           <input
-            type="radio"
+            type="checkbox"
             name="ideal"
-            checked={filter.ideal === "women"}
+            checked={filter.ideal.includes("women")}
             onChange={() => dispatch({ type: "IDEAL_FOR", payload: "women" })}
           />
           Women

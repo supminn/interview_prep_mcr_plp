@@ -7,8 +7,10 @@ export const getFilteredProducts = (data, filter) => {
       products.sort((a, b) => b.price - a.price);
     }
   }
-  if (filter.ideal) {
-    products = products.filter((product) => product.ideal === filter.ideal);
+  if (filter.ideal.length > 0) {
+    products = products.filter((product) =>
+      filter.ideal.includes(product.ideal)
+    );
   }
   if (filter.brand.length > 0) {
     products = products.filter((product) =>
