@@ -1,0 +1,19 @@
+.layout{
+    display: grid;
+    grid-template-areas: "nav nav"
+    "filter products";
+    grid-gap:0.5rem;
+    grid-template-columns: 1fr 4fr;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.filter{
+    grid-area: filter;
+}
+
+.products{
+    grid-area: products;
+}

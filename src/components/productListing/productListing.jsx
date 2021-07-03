@@ -1,8 +1,7 @@
-import { products } from "../../database/products";
 import { ProductCard } from "./ProductCard";
 import "./productListing.css";
 
-export const ProductListing = () => {
+export const ProductListing = ({ products }) => {
   return (
     <div className="grid-container">
       {products.map((product) => (

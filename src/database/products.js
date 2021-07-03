@@ -29,7 +29,7 @@ export const products = [
     price: 385,
     brand: "BASE 41",
     ideal: "women",
-    size: ["s", "m", "l", "xl", "xxl"],
+    size: ["s", "l", "xl", "xxl"],
   },
   {
     id: uuid(),
@@ -69,7 +69,7 @@ export const products = [
     price: 469,
     brand: "Seven Rocks",
     ideal: "men",
-    size: ["xs", "s", "m", "l", "xl"],
+    size: ["xs", "s", "l", "xl"],
   },
   {
     id: uuid(),
