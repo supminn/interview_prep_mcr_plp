@@ -15,9 +15,22 @@ h3{
 
 .filter-desc{
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .flex-filter{
     display: flex;
     flex-direction: column;
+    font-size: 0.9rem;
+}
+.flex-filter  label{
+    text-transform: lowercase;
+}
+.btn-clear{
+    background-color: transparent;
+    border: none;
+    color: var(--blue-shade);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
 }

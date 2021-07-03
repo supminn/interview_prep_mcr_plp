@@ -9,7 +9,10 @@ export const Filters = ({ filter, dispatch, products }) => {
     <div className="filters">
       <div className="flex-header">
         <h3>Filters</h3>
-        <button onClick={() => dispatch({ type: "CLEAR_ALL" })}>
+        <button
+          className="btn-clear"
+          onClick={() => dispatch({ type: "CLEAR_ALL" })}
+        >
           Clear all
         </button>
       </div>
