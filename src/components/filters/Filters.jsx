@@ -1,8 +1,10 @@
 import React from "react";
+import { useFilter } from "../../context/filterProvider";
 import { distinct } from "../../utils/arrayOperations";
 import "./filter.css";
 
-export const Filters = ({ filter, dispatch, products }) => {
+export const Filters = ({ products }) => {
+  const { filter, dispatch } = useFilter();
   const brands = products.map((item) => item.brand).filter(distinct);
   const sizes = ["xs", "s", "m", "l", "xl", "xxl"];
   return (
