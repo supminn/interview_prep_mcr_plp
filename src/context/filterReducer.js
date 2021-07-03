@@ -12,7 +12,7 @@ export const reducer = (state, { type, payload }) => {
     case "IDEAL_FOR":
       let isIncluded = state.ideal.find((value) => value === payload);
       return isIncluded
-        ? { ...state, ideal: state.ideal.filter((item) => item === payload) }
+        ? { ...state, ideal: state.ideal.filter((item) => item !== payload) }
         : { ...state, ideal: state.ideal.concat(payload) };
     case "TOGGLE_BRAND":
       const isBrandFiltered = state.brand.find((item) => item === payload);
